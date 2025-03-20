@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- for fourteen section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({ duration: 2000 });
+            gsap.from(".box", { x: -500, duration: 1, delay: 1 });
+
+            const targetValues = [5, 25, 50];
+            const progressBars = document.querySelectorAll(".progress-bar");
+            const progressValues = document.querySelectorAll(".progress-value");
+            const interval = 20;
+            const steps = 50;
+
+            targetValues.forEach((target, index) => {
+                let currentProgress = 0;
+                const stepIncrement = target / steps;
+                const animationInterval = setInterval(() => {
+                    currentProgress += stepIncrement;
+                    if (currentProgress >= target) {
+                        currentProgress = target;
+                        clearInterval(animationInterval);
+                    }
+                    progressBars[index].style.width = `${currentProgress}%`;
+                    progressValues[index].textContent = `${Math.round(currentProgress)}%`;
+                }, interval);
+            });
+        });
+    </script>
+    <!-- for last section -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'FONT2': ['Arial', 'sans-serif'],
+                        'novaSemi': ['Arial', 'sans-serif'],
+                        'novaBold': ['Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const script = document.createElement("script");
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = "https://widgets.nopaperforms.com/emwgts.js";
+        document.body.appendChild(script);
+    });
+</script>
+
+<!-- fonts -->
+<style>
+    @font-face {
+        font-family: 'Proxima Nova Regular';
+        src: url('./fonts/proximanova-regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Proxima Nova Bold';
+        src: url('./fonts/proximanova-bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Proxima Nova Light';
+        src: url('./fonts/proximanova-light.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        src: url('./fonts/montserrat.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'soehne1';
+        src: url('./fonts/soehne-breit-buch.woff2') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'soehne2';
+        src: url('./fonts/soehne-breit-kraftig.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* Tailwind Custom Font Classes */
+    .font-proxima-regular {
+        font-family: 'Proxima Nova Regular', sans-serif;
+    }
+
+    .font-proxima-bold {
+        font-family: 'Proxima Nova Bold', sans-serif;
+    }
+
+    .font-proxima-light {
+        font-family: 'Proxima Nova Light', sans-serif;
+    }
+
+    .font-montserrat {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .font-soehne1{
+        font-family: 'soehne1',sans-serif ;
+    }
+
+    .font-soehne2{
+        font-family: 'soehne2',sans-serif ;
+    }
+</style>
+
+<style>
+   
+
+
+    @keyframes scroll-right {
+                from {
+                    transform: translateX(0);
+                }
+                to {
+                    transform: translateX(-50%);
+                }
+            }
+
+            @keyframes scroll-left {
+                from {
+                    transform: translateX(-50%);
+                }
+                to {
+                    transform: translateX(0);
+                }
+            }
+
+            .animate-[scroll-right_90s_linear_infinite] {
+                animation: scroll-right 90s linear infinite;
+            }
+
+            .animate-[scroll-left_90s_linear_infinite] {
+                animation: scroll-left 90s linear infinite;
+            }
+
+            .content {
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            }
+
+
+            /* 8th section */
+            .gallery-container {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+        }
+        .gallery-item {
+            flex: 1;
+            transition: flex 0.3s ease-in-out;
+        }
+        .gallery-item:hover {
+            flex: 2;
+        }
+        .gallery-item:not(:hover) {
+            flex: 0.8;
+        }
+    
+    /* 9th section */
+    .swiperr-container {
+            display: flex;
+            overflow: hidden;
+            scroll-behavior: smooth;
+        }
+        .swiperr-slide {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* 10th section */
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: grab;
+        }
+
+        /* 15th section */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .marquee-track {
+            display: flex;
+            gap: 2rem;
+            animation: marqueeAnimation 15s linear infinite;
+        }
+        @keyframes marqueeAnimation {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        .marquee-container:hover .marquee-track {
+            animation-play-state: paused;
+        }
+        /* 17th section */
+        .custom-slider {
+            position: relative;
+            overflow: hidden;
+        }
+        .slider-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .custom-slide {
+            flex: 0 0 33.333%;
+            padding: 0 0.5rem;
+        }
+
+        /* 19th section */
+        .mentor-card:hover {
+            box-shadow: rgba(13, 38, 76, 0.19) 0px 0px 10px;
+            transition: all 0.3s ease;
+        }
+</style>
+<body class="">
+    
+    <!-- Navbar Include -->
+     <div class="absolute z-10 inset-0">
+        <div className='flex flex-col justify-between h-full'>
+            <div id="navbar-container"></div>
+        </div>
+         
+     </div>
+    
+    <section class="relative h-screen w-full">
+        <div class="absolute inset-0 bg-black bg-blend-multiply bg-opacity-70"></div>
+        <video class="h-full w-full object-cover" autoplay loop muted>
+            <source src="/video/GIMS_Video.mp4" type="video/mp4">
+        </video>
+        
+        <div class="absolute z-10 inset-0 flex flex-col justify-center h-full">
+            <div class="max-w-[1400px] mx-auto w-full">
+                <div class="heading max-2xl:px-20 max-md:px-5 max-sm:px-5">
+                    <h1 class="max-w-4xl font-proxima-regular leading-[60px]  tracking-tight text-white text-6xl max-xl:text-5xl max-md:pt-8 max-[350px]:text-2xl max-sm:pt-4 max-sm:text-start max-sm:text-2xl">
+                        GNIOT Institute Of <br />
+                        <span class="relative whitespace-nowrap ">
+                            
+                            <span class="relative font-proxima-bold text-white uppercase">Management Studies</span>
+                        </span>
+                    </h1>
+                    <p class="mt-8 max-w-3xl text-gray-200 proxi-regular text-xl max-md:text-base max-md:mt-4 max-sm:text-sm max-sm:mt-3">
+                        GNIOT Institute of Management Studies (GIMS) is a Leading Business School of India located in Greater Noida,Delhi/NCR, offering two-year full time AICTE Approved, HLACT (U.K.) Accredited, Dual Specialization, Industry Focused PGDM Programme.
+                    </p>
+                    <button onclick="openPopup()" class="py-3 px-10 mt-5 text-[15px] rounded-xl font-proxima-bold uppercase bg-yellow-500 text-white w-max hover:border hover:border-gray-300 hover:bg-transparent hover:border-b-4 hover:transform transition duration-200 ease-linear scale-y-105 tracking-widest max-md:mt-4 max-md:text-sm max-sm:text-xs max-sm:mt-3">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bg-indigo-900 w-full bg-opacity-90 py-10 max-md:py-8 absolute z-10 bottom-0">
+                <div class="bottom-section max-w-7xl mx-auto grid grid-cols-4 max-sm:grid-cols-2 max-sm:px-2 max-sm:gap-3 text-center text-white tracking-loose">
+                    <div><span class="text-4xl font-semibold font-soehne1 font-bold ">19000+</span><p class=" font-soehne2" >Group Alumni</p></div>
+                    <div><span class="text-4xl font-semibold font-soehne1 font-bold">100%</span><p class=" font-soehne2">Placements</p></div>
+                    <div><span class="text-4xl font-semibold font-soehne1 font-bold">8000+</span><p class=" font-soehne2">Students</p></div>
+                    <div><span class="text-4xl font-semibold font-soehne1 font-bold">500+</span><p class=" font-soehne2">Faculty with Diverse Experience</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Popup Form -->
+    <div id="popup-form" class="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-20 hidden"></div>
+
+
+
+<!-- second section -->
+
+<section class="py-8 max-sm:py-4 bg-gray-100">
+    <div class="max-w-screen-xl mx-auto px-6 max-sm:px-3">
+        <div class="flex flex-row justify-between items-center max-md:flex-col max-sm:flex-col">
+            
+            <!-- Left Content -->
+            <div class="w-6/12 max-sm:w-full p-6 max-md:w-full max-sm:p-0">
+                <div class="flex flex-col justify-center h-full">
+                    <div class="flex-shrink-0">
+                        <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gims-logobg.webp" 
+                             alt="logo" 
+                             class="max-md: max-sm:w-28" 
+                             loading="eager">
+                    </div>
+                    <p class="text-lg mb-6 text-gray-500 max-sm:text-sm max-sm:mb-3 font-sans">
+                        GNIOT Institute of Management Studies (GIMS) is located in futuristic township of Greater Noida, offering immense career opportunities in alignment with global career perspectives. GIMS operates under aegis of 25-year-old GNIOT Group, with-in 5 years of establishment, GIMS has become one of the most acclaimed institutes in North India for management aspirants.<br> Success of GIMS students in industry has propelled the multi-dimensional progress of the institution, as a result GIMS offers a cutting edge, contemporary, foreseeable and industry oriented management education, that ensures a sustainable career growth.
+                    </p>
+                    
+                </div>
+            </div>
+
+            <!-- Right Form Section -->
+            <div class="w-5/12 max-md:w-full max-sm:w-full">
+                <div class="text-center mb-6 max-sm:mb-3">
+                    <!-- <h2 class="text-4xl font-bold mb-2 max-sm:text-xl">Application Form 2025</h2> -->
+                </div>
+
+                <!-- Widget Form -->
+                <div class="npf_wgts drop-shadow-md" data-height="550px" data-w="fa0c1ce650bf21dda1024e905be842d6"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Third Section -->
+
+<section class="bg-[url('https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/pgdmBG.webp')] bg-cover bg-center bg-no-repeat bg-blue-800/70 bg-blend-multiply max-sm:h-fit">
+    <div class="max-w-[1400px] max-2xl:max-w-6xl max-xl:px-10 mx-auto py-10 w-full max-md:py-6 max-sm:py-4 max-sm:px-5">
+        <!-- <h2 class="text-gray-200 text-sm tracking-widest mb-4 max-md:mb-3 max-sm:mb-2 max-sm:text-[10px]">WHY CHOOSE US</h2> -->
+
+        <h3 class="text-5xl text-gray-200 mb-6 max-lg:text-4xl max-md:text-3xl max-sm:text-2xl max-md:mb-4 max-sm:mb-3 font-soehne1 font-bold  "  >Why PGDM With GIMS</h3>
+
+        <p class="text-base text-white max-w-2xl mb-8 max-md:mb-6 max-sm:text-sm max-sm:mb-4 max-xl:max-w-lg font-proxima-regular">
+            The PGDM program at GIMS, Greater Noida, provides students with a unique opportunity to specialize in two key management areas, aligning with the needs of the modern workplace. The program's curriculum combines traditional management concepts with practical experience and modern learning methods, ensuring students are well-prepared for the challenges of today's competitive business environment. By developing both their technical skills and interpersonal abilities, students gain the tools necessary to succeed in their careers.
+        </p>
+
+        <button id="readMoreBtn" class="py-3 px-10 max-sm:py-2 max-sm:px-5 mt-5 text-[15px] rounded-xl uppercase bg-blue-500 hover:text-blue-600 text-white w-max hover:border hover:border-blue-300 hover:bg-transparent hover:border-b-4 hover:transform transition duration-200 ease-linear scale-y-105 tracking-widest max-md:mt-4 max-sm:text-sm max-sm:mt-3 font-proxima-bold">READ MORE</button>
+    </div>
+</section>
+
+
+<!-- fourth section -->
+<section>
+    <div class="max-w-5xl mx-auto py-16 max-lg:py-12 max-md:py-10 max-sm:py-8 max-sm:px-4">
+        <div class="relative rounded-lg max-sm:mb-8 max-md:mb-12 mb-16">
+            <div class="cursor-pointer" id="openModal">
+                <img
+                    src="https://img.youtube.com/vi/mPnsuSYSkPc/maxresdefault.jpg"
+                    alt="Video Thumbnail"
+                    loading="eager"
+                    class="w-full aspect-video object-cover rounded-3xl max-sm:rounded-xl max-md:rounded-2xl"
+                />
+                <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-40 max-sm:rounded-xl max-md:rounded-2xl rounded-3xl">
+                    <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/play.gif" alt="play" loading="eager" class='rounded-full max-sm:w-10 max-md:w-12 w-14' />
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <h2 class="text-3xl  mb-12 max-lg:text-2xl max-md:text-xl max-sm:text-lg max-sm:mb-4 max-md:mb-7 max-lg:mb-9 font-soehne2">
+                GAIN GLOBAL EXPOSURE THROUGH EXTENSIVE INTERNATIONAL NETWORK
+            </h2>
+            <div class="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-8 max-lg:gap-6 max-md:gap-4 max-sm:gap-3 ">
+                <div class="space-y-2">
+                    <div class="text-red-600 text-5xl max-lg:text-3xl max-md:text-2xl max-sm:text-xl tracking-loose font-soehne2">25+</div>
+                    <div class="text-lg max-md:text-base max-sm:text-sm font-soehne1">Collaborations</div> 
+                    <div class="text-sm max-sm:text-xs font-proxima-regular">
+                        with Top Ranked Foreign Universities in 15+ countries
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-red-600 text-5xl max-lg:text-3xl max-md:text-2xl max-sm:text-xl tracking-loose font-soehne2">500+</div>
+                    <div class="text-lg max-md:text-base max-sm:text-sm font-soehne1">Students</div>
+                    <div class="text-sm max-sm:text-xs font-proxima-regular">
+                        Traveled Abroad for Semester, Summer & Cultural Exchange Programs
+                    </div>
+                </div>
+                <div class="space-y-2 sm:col-span-2 md:col-span-1">
+                    <div class="text-red-600 text-5xl max-lg:text-3xl max-md:text-2xl max-sm:text-xl tracking-loose font-soehne2">370+</div>
+                    <div class="text-lg max-md:text-base max-sm:text-sm font-soehne1">Internships</div>
+                    <div class="text-sm max-sm:text-xs font-proxima-regular">
+                        in Walt Disney, USA (Highest in the Region)
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="modal" class="fixed inset-0 z-50 bg-black bg-opacity-80 flex justify-center items-center p-4 hidden">
+            <div class="relative bg-white rounded-lg max-w-5xl w-full aspect-video">
+                <button id="closeModal" class="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 text-white bg-black rounded-full w-8 h-8 sm:w-10 sm:h-10 flex justify-center items-center" aria-label="Close">✕</button>
+                <iframe id="videoFrame" class="w-full h-full rounded-lg" src="" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- fifth section -->
+<section class="px-2 overflow-hidden my-12">
+    <div class="bg-white py-10 px-16 max-lg:py-7 max-lg:px-8 max-md:py-5 max-md:px-6 max-sm:px-0 max-sm:py-3">
+        <h1 class="text-4xl flex items-center justify-center gap-2 lg:text-4xl md:text-3xl sm:text-2xl max-sm:text-xl  font-soehne2 mb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 sm:h-8 sm:w-8">
+              <rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect>
+              <path d="M9 22v-4h6v4"></path>
+              <path d="M8 6h.01"></path>
+              <path d="M16 6h.01"></path>
+              <path d="M12 6h.01"></path>
+              <path d="M8 10h.01"></path>
+              <path d="M16 10h.01"></path>
+              <path d="M12 10h.01"></path>
+              <path d="M8 14h.01"></path>
+              <path d="M16 14h.01"></path>
+              <path d="M12 14h.01"></path>
+            </svg>
+            Consistent Recruiting Partners of GIMS
+          </h1>
+        <div class="relative w-full overflow-hidden space-y-6 py-7 max-lg:py-6 max-md:py-5 max-sm:py-4">
+            <div class="flex space-x-6 animate-[scroll-right_120s_linear_infinite] w-max max-lg:spaxe-x-4 max-md:spaxe-x-3 max-sm:space-x-2" id="logoRow1"></div>
+            <div class="flex space-x-6 animate-[scroll-left_120s_linear_infinite] w-max max-lg:spaxe-x-4 max-md:spaxe-x-3 max-sm:space-x-2" id="logoRow2"></div>
+            <div class="flex space-x-6 animate-[scroll-right_120s_linear_infinite] w-max max-lg:spaxe-x-4 max-md:spaxe-x-3 max-sm:space-x-2" id="logoRow3"></div>
+        </div>
+    </div>
+</section>
+
+<!-- sixth section -->
+<section class="max-w-[1400px] mx-auto py-12 px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:flex lg:flex-row-reverse">
+        <div class="relative col-span-1 lg:col-span-3 w-full h-[400px] overflow-hidden rounded-2xl" id="slider-container">
+            <div class="absolute inset-0 transition-opacity duration-500" id="testimonial-content"></div>
+            <button class="absolute left-2 top-1/2 transform -translate-y-1/2 p-2 bg-white bg-opacity-50 rounded-full hover:bg-opacity-75 w-8 h-8 flex items-center justify-center" id="prev-slide"> &#10094;</button>
+            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 p-4 bg-white bg-opacity-50 rounded-full hover:bg-opacity-75 w-8 h-8 flex items-center justify-center" id="next-slide"> &#10095;</button>
+        </div>
+        <div class="relative col-span-1 lg:col-span-2 h-[400px] cursor-pointer" id="video-thumbnail">
+            <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/maxresdefault.webp" class="w-full h-full rounded-2xl object-cover brightness-50 ">
+            <div class="absolute inset-0 flex justify-center items-center bg-transparent bg-opacity-40 rounded-2xl">
+                <span class="text-white text-4xl"> <i class="fas fa-play"></i></span>
+            </div>
+        </div>
+    </div>
+    
+    <div id="video-modal" class="fixed inset-0 z-50 bg-black bg-opacity-80 hidden flex justify-center items-center p-4">
+        <div class="relative w-full max-w-5xl aspect-video">
+            <button class="absolute -top-10 right-0 text-white bg-red-500 rounded-full w-8 h-8" id="close-video">✕</button>
+            <iframe id="video-frame" class="w-full h-full" src="" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+
+<!-- seventh section -->
+<section class="py-10 bg-white">
+    <div class="container-fluid mx-auto py-10 px-16 max-lg:py-7 max-lg:px-8 max-md:py-5 max-md:px-6 max-sm:px-3 max-sm:py-3">
+        <h1 class=" text-2xl md:text-3xl lg:text-4xl flex items-center justify-center gap-2 mb-4 font-soehne2">
+            <svg class='w-6 h-6 sm:h-8 sm:w-8' fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11.414V6a1 1 0 10-2 0v1.586l-.707-.707a1 1 0 00-1.414 1.414l2.121 2.122a1 1 0 001.414 0l2.121-2.122a1 1 0 10-1.414-1.414L11 6.586z" clip-rule="evenodd"></path>
+            </svg>
+            National and International Collaborations​
+        </h1>
+        <p class="text-gray-600 text-lg max-w-3xl text-center mx-auto tracking-loose mb-2 font-soehne1" >GIMS Collaborates with academic fraternity of national and international repute for student exchange, faculty exchange, research, events,teaching-learning pedagogy exchange, and multi-dimensional cultural exchange.</p>
+        <div class="mx-auto py-10 max-md:py-6 max-sm:py-4">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <script>
+                        const logos = [
+                            { alt: "AIT", src: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo1.webp" },
+                            { alt: "LSUS", src: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo2.webp" },
+                            { alt: "BFSI", src: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo3.webp" },
+                            { alt: "Kathmandu", src: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo4.webp" },
+                            { alt: "University of Dubai", src: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo5.webp" },
+                            { alt: "MAHSA", src: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo6.webp" },
+                            { alt: "DE MONTFORT", src: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo7.webp" },
+                            { alt: "POLITEKNIK", src: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo8.webp" },
+                            { alt: "POLITEKNIK", src: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo9.webp" },
+                            { alt: "POLITEKNIK", src: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo10.webp" }
+                        ];
+                        
+                        document.write(logos.map((image, index) => `
+                            <div class="swiper-slide flex justify-center items-center border rounded-md h-20 max-sm:h-12">
+                                <img alt="${image.alt}" src="${image.src}" class="p-2 h-full w-full object-contain" loading="eager" />
+                            </div>
+                        `).join(''));
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Eighth Section -->
+<section class="w-full overflow-hidden py-10 max-md:py-7 max-sm:py-5">
+    <div class="gallery-container">
+        <div class="gallery-item relative group cursor-pointer" onclick="openModal(this)">
+            <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gallery-4.webp" class="object-cover w-full h-[400px] max-sm:h-[30vh] brightness-100 group-hover:brightness-50 transition-all">
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="w-12 h-12 bg-transparent border border-white text-white flex items-center justify-center text-3xl font-bold rounded-full pb-2">+</div>
+
+            </div>
+        </div>
+        <div class="gallery-item relative group cursor-pointer" onclick="openModal(this)">
+            <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gallery-5.webp" class="object-cover w-full h-[400px] max-sm:h-[30vh] brightness-100 group-hover:brightness-50 transition-all">
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="w-12 h-12 bg-transparent border border-white text-white flex items-center justify-center text-3xl font-bold rounded-full pb-2">+</div>
+
+            </div>
+        </div>
+        <div class="gallery-item relative group cursor-pointer" onclick="openModal(this)">
+            <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gallery-6.webp" class="object-cover w-full h-[400px] max-sm:h-[30vh] brightness-100 group-hover:brightness-50 transition-all">
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="w-12 h-12 bg-transparent border border-white text-white flex items-center justify-center text-3xl font-bold rounded-full pb-2">+</div>
+
+            </div>
+        </div>
+        <div class="gallery-item relative group cursor-pointer" onclick="openModal(this)">
+            <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gallery-3.webp" class="object-cover w-full h-[400px] max-sm:h-[30vh] brightness-100 group-hover:brightness-50 transition-all">
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="w-12 h-12 bg-transparent border border-white text-white flex items-center justify-center text-3xl font-bold rounded-full pb-2">+</div>
+
+            </div>
+        </div>
+        <div class="gallery-item relative group cursor-pointer" onclick="openModal(this)">
+            <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gallery.webp" class="object-cover w-full h-[400px] max-sm:h-[30vh] brightness-100 group-hover:brightness-50 transition-all">
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="w-12 h-12 bg-transparent border border-white text-white flex items-center justify-center text-3xl font-bold rounded-full pb-2">+</div>
+
+            </div>
+        </div>
+        <div class="gallery-item relative group cursor-pointer" onclick="openModal(this)">
+            <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gallery-2.webp" class="object-cover w-full h-[400px] max-sm:h-[30vh] brightness-100 group-hover:brightness-50 transition-all">
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div class="w-12 h-12 bg-transparent border border-white text-white flex items-center justify-center text-3xl font-bold rounded-full pb-2">+</div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden px-4" onclick="closeModal()">
+        <div class="relative max-w-4xl w-full rounded-lg" onclick="event.stopPropagation()">
+            <img id="modal-img" src="" class="object-contain w-full h-[80vh] max-sm:h-[60vh] rounded-lg">
+            <button class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 transition-colors" onclick="closeModal()">&times;</button>
+        </div>
+    </div>
+</section>
+
+<!-- Nineth section-->
+<section class=" py-12 bg-[#f8f9fd]">
+    <div class="max-w-[1400px] mx-auto">
+    <div class="text-center max-sm:py-4">
+        <h1 class="text-5xl  max-lg:text-4xl max-md:text-3xl max-sm:text-2xl font-soehne2 mb-8">
+            Tutelage-An Exclusive Corporate Readiness <br> Training Programme
+        </h1>
+        <div class="flex justify-center flex-wrap mt-4 sm:px-12 px-2  text-lg  text-gray-600 max-w-4xl mx-auto font-soehne1 ">
+            <p class="text-lg noto-sans" >
+                GIMS, Greater Noida, proudly launches "Tutelage," a transformative training program featuring India's Youth Icon, Mr. Sonu Sharma, motivational speaker and corporate trainer. This unique collaboration between GIMS' Learning and Development Department and Mr. Sonu Sharma empowers students to boost their self-confidence, enhance learning capabilities, and prepare for the challenges of the corporate world.
+            </p>
+        </div>
+    </div>
+    
+    <div class="flex justify-center p-1">
+        <div class="swiperr-container max-w-4xl" id="carousel">
+            <div class="swiper-wrapper flex">
+                <div class="swiperr-slide flex justify-center p-2">
+                    <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gims4.webp" class="w-full max-w-sm rounded-lg shadow-lg" />
+                </div>
+                <div class="swiperr-slide flex justify-center p-2">
+                    <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gims5.webp" class="w-full max-w-sm rounded-lg shadow-lg" />
+                </div>
+                <div class="swiperr-slide flex justify-center p-2">
+                    <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gims6.webp" class="w-full max-w-sm rounded-lg shadow-lg" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<!-- tenth section -->
+<div class="grid grid-cols-1 xl:grid-cols-2 max-sm:px-2">
+    <div class="flex flex-col justify-center p-5 md:p-10 lg:p-16 bg-center bg-cover bg-blend-multiply bg-opacity-75 bg-[url('https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/three-students.webp')] bg-black text-white">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-light">
+            <span class="font-semibold bg-gradient-to-r from-green-500 to-indigo-400 bg-clip-text text-transparent animate-gradient ">Placements</span> Overview
+        </h2>
+        <p class="text-lg md:text-xl lg:text-2xl font-light leading-5 mt-3">Record-Breaking Achievements and Industry-Driven Success</p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mt-6">
+            <div class="text-start">
+                <p class="text-2xl md:text-3xl lg:text-5xl font-thin mt-4">22852</p>
+                <p class="text-sm md:text-base leading-none mt-2">Placement <br> Offers</p>
+            </div>
+            <div class="text-start">
+                <p class="text-2xl md:text-3xl lg:text-5xl font-thin mt-4">858+</p>
+                <p class="text-sm md:text-base leading-none mt-2">Company <br> Visits</p>
+            </div>
+            <div class="text-start">
+                <p class="text-2xl md:text-3xl lg:text-5xl font-thin mt-4">20-70 <small class="text-lg">LPA</small></p>
+                <p class="text-sm md:text-base leading-none mt-2">Package Offered to 150 Students</p>
+            </div>
+            <div class="text-start">
+                <p class="text-2xl md:text-3xl lg:text-5xl font-thin mt-4">10-20 <small class="text-lg">LPA</small></p>
+                <p class="text-sm md:text-base leading-none mt-2">Package Offered to 5792 Students</p>
+            </div>
+            <div class="text-start">
+                <p class="text-2xl md:text-3xl lg:text-5xl font-thin mt-4">5-10 <small class="text-lg">LPA</small></p>
+                <p class="text-sm md:text-base leading-none mt-2">Package Offered to Approx 7042 Students</p>
+            </div>
+            <div class="text-start">
+                <p class="text-2xl md:text-3xl lg:text-5xl font-thin mt-4">5 <small class="text-lg">LPA</small></p>
+                <p class="text-sm md:text-base leading-none mt-2">Package Offered to 9958 Students</p>
+            </div>
+            <div class="text-start">
+                <p class="text-2xl md:text-3xl lg:text-5xl text-orange-300 font-thin mt-4">23.31 <small class="text-lg text-white">LPA</small></p>
+                <p class="text-sm md:text-base leading-none mt-2">Highest National Package Offered</p>
+            </div>
+            <div class="text-start">
+                <p class="text-2xl md:text-3xl lg:text-5xl text-orange-300 font-thin mt-4">70 <small class="text-lg text-white">LPA</small></p>
+                <p class="text-sm md:text-base leading-none mt-2">Highest International Package Offered</p>
+            </div>
+            <div class="text-start">
+                <p class="text-2xl md:text-3xl lg:text-5xl text-orange-300 font-thin mt-4">12.5 <small class="text-lg text-white">LPA</small></p>
+                <p class="text-sm md:text-base leading-none mt-2">Average Package<br> Offered</p>
+            </div>
+        </div>
+
+        <div class="flex justify-start space-x-4 mt-6 max-lg:justify-center">
+            <button class="bg-gradient-to-r from-green-500 to-indigo-400 text-white text-sm font-bold px-6 py-2 rounded-md hover:bg-[#3c5686] hover:border-b-4 hover:border-[#ccce48] hover:scale-105 transition-transform duration-500">APPLY TODAY</button>
+            <button class="border border-white text-white text-sm font-bold px-4 py-2 rounded-md hover:bg-white hover:text-black">VIEW PLACEMENTS</button>
+        </div>
+    </div>
+
+    <div class="flex flex-col justify-center">
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:place-content-start max-sm:gap-2 h-[100vh] max-sm:mb-1.5">
+            <!-- Placement Sliders -->
+            <div class="swiper mySwiper1 w-[100%]">
+                <div class="swiper-wrapper"></div>
+            </div>
+            <div class="swiper mySwiper2 w-[100%]">
+                <div class="swiper-wrapper"></div>
+            </div>
+            <div class="swiper mySwiper3 w-[100%]">
+                <div class="swiper-wrapper"></div>
+            </div>
+            <div class="swiper mySwiper4 w-[100%]">
+                <div class="swiper-wrapper"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- eleventh section -->
+<section class="relative w-full max-w-[1550px] mx-auto py-14 max-xl:py-12 max-lg:py-10 max-md:py-8 max-sm:py-6 pl-2 pr-10 2xl:pr-2 max-md:pr-2 max-sm:pr-2">
+    <div id="desktopCelebHighlights" class="hidden lg:flex space-x-2">
+        <!-- Slides will be added dynamically -->
+    </div>
+    <div id="mobileCelebHighlights" class="lg:hidden overflow-hidden relative">
+        <div id="mobileSwiperWrapper" class="flex transition-transform duration-500 ease-in-out">
+            <!-- Slides will be added dynamically -->
+        </div>
+    </div>
+</section>
+
+
+<!-- twelveth section -->
+<section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto text-center mb-10">
+        <h2 class="text-4xl  mb-4 max-lg:text-3xl max-md:text-2xl max-sm:text-xl text-white font-soehne2 ">Corporate speaks for GIMS</h2>
+        <p class="text-gray-400 max-w-4xl mx-auto max-sm:text-sm font-soehne1">
+            "Corporate Speaks for GIMS" highlights testimonials and insights from industry leaders, showcasing the impact and excellence of GIMS in shaping professionals ready for the corporate world.
+        </p>
+    </div>
+    <div id="reviews-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-lg:gap-5 max-md:gap-4 max-sm:gap-3 max-w-7xl mx-auto">
+        <!-- Dynamic Cards Inserted Here -->
+    </div>
+    <div class="mt-8 flex items-center justify-center gap-4">
+        <button id="prevBtn" class="text-white bg-gray-500 flex justify-center items-center hover:scale-110 transition duration-200 ease-linear w-8 h-8 rounded-full">
+            &#8592;
+        </button>
+        <div class="w-64 max-sm:w-48 h-1 bg-gray-800 rounded-full overflow-hidden">
+            <div id="progressBar" class="h-full bg-gradient-to-r from-blue-500 via-cyan-400 to-cyan-300 transition-all duration-500"></div>
+        </div>
+        <button id="nextBtn" class="text-white bg-gray-500 flex justify-center items-center hover:scale-110 transition duration-200 ease-linear w-8 h-8 rounded-full">
+            &#8594;
+        </button>
+    </div>
+</section>
+
+
+<!-- thirteen section -->
+ <section class="bg-gray-100 py-10 px-3">
+    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-4 font-soehne2">
+        Salient Features of the Programme
+    </h2>
+    <p class="text-center text-gray-600 text-sm sm:text-base lg:text-lg mb-8 font-soehne1">
+        Offers exclusive opportunities to explore the world.
+    </p>
+    <div class="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center" id="content-container"></div>
+
+ </section>
+
+ <!-- fourteen section -->
+ <div class="flex w-full flex-col md:flex-row ">
+    <div class="relative flex-1">
+        <img src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/building.webp" alt="University" class="w-full h-full object-cover">
+        <div class="box absolute bottom-0 left-0 bg-yellow-300 p-6 lg:p-8 w-[50%] max-xl:w-full max-lg:w-full max-md:w-full text-black">
+            <h4 class="text-xl lg:text-2xl font-soehne2 ">We Are Open For Opportunities!</h4>
+            <p class="mt-4 text-sm lg:text-base leading-relaxed">
+                Explore limitless possibilities with us! Partner for growth, innovation, and success as we embrace new opportunities and collaborations. Let’s create a brighter future together!
+            </p>
+            <a href="#" class="mt-6 inline-block text-black font-medium text-sm lg:text-base hover:translate-y-[-3px] transition-transform">View All Facilities →</a>
+        </div>
+    </div>
+
+    <div class="flex-1 bg-[#0D80DA] text-white flex flex-col justify-center px-8 lg:px-16 py-8">
+        <h2 class="text-3xl lg:text-5xl font-soehne2">Top Average Placement <br> Excerpts @GIMS</h2>
+        <p class="text-lg mt-4 text-green-100 leading-relaxed">Discover the highlights of outstanding placement opportunities at GIMS, where students achieve remarkable career success across diverse industries.</p>
+        
+        <div class="mt-8 space-y-6 max-w-md">
+            <div>
+                <p class="flex justify-between text-sm font-soehne2" data-aos="fade-right">₹ 12.45 LPA <span class="progress-value">0%</span></p>
+                <div class="h-2 bg-green-950 rounded mt-2 overflow-hidden">
+                    <div class="h-full bg-yellow-400 progress-bar transition-all duration-500"></div>
+                </div>
+            </div>
+            <div>
+                <p class="flex justify-between text-sm font-soehne2" data-aos="fade-right">₹ 9.23 LPA <span class="progress-value">0%</span></p>
+                <div class="h-2 bg-green-950 rounded mt-2 overflow-hidden">
+                    <div class="h-full bg-yellow-400 progress-bar transition-all duration-500"></div>
+                </div>
+            </div>
+            <div>
+                <p class="flex justify-between text-sm font-soehne2" data-aos="fade-right">₹ 6.34 LPA <span class="progress-value">0%</span></p>
+                <div class="h-2 bg-green-950 rounded mt-2 overflow-hidden">
+                    <div class="h-full bg-yellow-400 progress-bar transition-all duration-500"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- fifteenth section -->
+ <section class="bg-gray-50">
+    <div class="w-full py-10">
+        <h3 class="text-center text-2xl md:text-3xl lg:text-4xl font-semibold text-black mb-8 font-soehne2 ">
+            Affiliations, Accreditations & Collaborations
+        </h3>
+        <div class="marquee-container">
+            <div class="marquee-track" id="marquee">
+                <!-- Images will be inserted dynamically -->
+            </div>
+        </div>
+        <div class="flex justify-center mt-4">
+            <a href="#" class="text-black font-medium text-sm lg:text-base transition-transform hover:translate-y-[-3px]">
+                Read more →
+            </a>
+        </div>
+    </div>
+ </section>
+
+ <!-- sixteenth section -->
+ <section class="relative bg-gray-900 bg-cover bg-no-repeat bg-center bg-[url('https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/one-exam-bg-new.webp')]">
+    <div class="absolute inset-0 bg-blue-800 opacity-95 z-0"></div>
+    <div class="text-white py-16 px-4 relative z-10 max-lg:py-13 max-md:py-10 max-sm:py-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl mb-4 uppercase max-lg:text-3xl max-md:text-2xl max-sm:text-xl font-soehne2">Gims Admission Process</h2>
+                <p class="max-w-4xl mx-auto max-sm:text-sm font-soehne1">
+                    Any institution acquires its standing through its stakeholders. The students are one of the biggest stakeholders which play a major role in pivoting the journey of any educational institution. Keeping its stakeholders at the core of the institute, the admission process begins with the screening of the candidate’s profile.
+                </p>
+            </div>
+            <div class="grid grid-cols-3 max-md:grid-cols-2 max-[500px]:grid-cols-1 place-items-center gap-3">
+                <div class="flex flex-col border border-gray-300 p-6 rounded-xl h-full w-full ">
+                    <div class="mb-4 max-md:mb-3 max-sm:mb-2">
+                        <i class="fas fa-chart-line text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 max-md:text-lg max-sm:text-base">Application Screening</h3>
+                    <ul class="text-base list-disc list-inside max-md:text-sm max-sm:text-xs">
+                        <li>Applying to the Institute</li>
+                        <li>Screening the Application</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col border border-gray-300 p-6 rounded-xl h-full w-full ">
+                    <div class="mb-4 max-md:mb-3 max-sm:mb-2">
+                        <i class="fas fa-user text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 max-md:text-lg max-sm:text-base">Testing</h3>
+                    <ul class="text-base list-disc list-inside max-md:text-sm max-sm:text-xs">
+                        <li>CET</li>
+                        <li>Group Discussion</li>
+                        <li>PI</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col border border-gray-300 p-6 rounded-xl h-full w-full ">
+                    <div class="mb-4 max-md:mb-3 max-sm:mb-2">
+                        <i class="fas fa-award text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 max-md:text-lg max-sm:text-base">Rejection</h3>
+                    <p class="text-base max-sm:text-xs max-md:text-sm">Based on the Performance <br> in CET/GD/PI</p>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto py-8 max-md:py-6 max-sm:py-6">
+            <div class="w-full overflow-auto">
+                <div class="text-center">
+                    <h3 class="text-3xl mb-3 font-bold max-md:text-2xl max-sm:text-xl font-soehne2 ">Scholarship at GIMS</h3>
+                </div>
+                <table class="min-w-full table-auto border-collapse">
+                    <thead class="border border-gray-300">
+                        <tr class="bg-indigo-950 text-white">
+                            <th class="py-2 px-4 border-b">ENTRANCE EXAMINATION</th>
+                            <th class="py-2 px-4 border-b border-x">ELIGIBILITY FOR SCHOLARSHIP</th>
+                            <th class="py-2 px-4 border-b">SCHOLARSHIP OFFERED ON TUITION FEE</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-base text-white text-center max-sm:text-sm">
+                        <tr class="border border-gray-300">
+                            <td rowspan="2" class="py-2 px-4 border-b">MAT</td>
+                            <td class="py-2 px-4 border-x border-b">Composite score 750 or above</td>
+                            <td class="py-2 px-4 border-b">Rs. 40,000/- on tuition fee</td>
+                        </tr>
+                        <tr class="border border-gray-300">
+                            <td class="py-2 px-4 border-x border-b">Composite score 650 or 749 above</td>
+                            <td class="py-2 px-4 border-b">Rs. 30,000/- on tuition fee</td>
+                        </tr>
+                        <tr class="border border-gray-300">
+                            <td rowspan="2" class="py-2 px-4 border-b">CAT</td>
+                            <td class="py-2 px-4 border-x border-b">80 Percentile or above</td>
+                            <td class="py-2 px-4 border-b">Rs. 60,000/- on tuition fee</td>
+                        </tr>
+                        <tr class="border border-gray-300">
+                            <td class="py-2 px-4 border-x border-b">70-79 Percentile</td>
+                            <td class="py-2 px-4 border-b">Rs. 50,000/- on tuition fee</td>
+                        </tr>
+                        <tr class="border border-gray-300">
+                            <td rowspan="2" class="font-medium py-2 px-4 border-b max-sm:py-1.5 max-sm:px-2.5">
+                                XAT
+                            </td>
+                            <td class="py-2 px-4 border-x border-b max-sm:py-1.5 max-sm:px-2.5">80 Percentile or above</td>
+                            <td class="py-2 px-4 border-b max-sm:py-1.5 max-sm:px-2.5">Rs. 60,000/- on tuition fee</td>
+                        </tr>
+                        <tr class="border border-gray-300">
+                            <td class="py-2 px-4 border-x border-b max-sm:py-1.5 max-sm:px-2.5">70-79 Percentile</td>
+                            <td class="py-2 px-4 border-b max-sm:py-1.5 max-sm:px-2.5">Rs. 50,000/- on tuition fee</td>
+                        </tr>
+                        <tr class="border border-gray-300">
+                            <td rowspan="2" class="font-medium py-2 px-4 border-b max-sm:py-1.5 max-sm:px-2.5">
+                                C-MAT
+                            </td>
+                            <td class="py-2 px-4 border-x border-b max-sm:py-1.5 max-sm:px-2.5">90 Percentile or above</td>
+                            <td class="py-2 px-4 border-b max-sm:py-1.5 max-sm:px-2.5">Rs. 50,000/- on tuition fee</td>
+                        </tr>
+                        <tr class="border border-gray-300">
+                            <td class="py-2 px-4 border-x border-b max-sm:py-1.5 max-sm:px-2.5">70-89 Percentile</td>
+                            <td class="py-2 px-4 border-b max-sm:py-1.5 max-sm:px-2.5">Rs. 40,000/- on tuition fee</td>
+                        </tr>
+                        <tr class="border border-gray-300">
+                            <td class="font-medium py-2 px-4 border-b max-sm:py-1.5 max-sm:px-2.5">GAT</td>
+                            <td class="py-2 px-4 border-x border-b max-sm:py-1.5 max-sm:px-2.5">65 percentile or above</td>
+                            <td class="py-2 px-4 border-b max-sm:py-1.5 max-sm:px-2.5">Rs. 30,000/- on tuition fee</td>
+                        </tr>
+                        <tr class="border border-gray-300">
+                            <td class="font-medium py-2 px-4 border-b max-sm:py-1.5 max-sm:px-2.5">10th, 12th, Graduation</td>
+                            <td class="py-2 px-4 border-x border-b max-sm:py-1.5 max-sm:px-2.5">80% aggregate with GAT</td>
+                            <td class="py-2 px-4 border-b max-sm:py-1.5 max-sm:px-2.5">Rs. 50,000/- on tuition fee</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- seventeenth section -->
+ <section>
+    <div class="max-w-[1400px] mx-auto px-4 py-8 flex flex-col items-center relative">
+        <h1 class="text-4xl font-soehne2 text-center text-gray-900 mb-8">Gimsians Speak</h1>
+        
+        <!-- Chevron Buttons -->
+        <button id="prevBtnn" class="absolute left-0 top-1/2 mt-6 py-2 px-4 bg-white rounded-full shadow-md transform -translate-y-1/2 cursor-pointer z-10 hover:bg-gray-100 transition-colors">
+            <i class="fas fa-chevron-left text-2xl"></i>
+        </button>
+        
+        <div class="custom-slider w-full relative" id="customCarousel">
+            <div class="slider-container" id="sliderContainer">
+                <!-- Videos will be inserted here -->
+            </div>
+        </div>
+        
+        <!-- Chevron Buttons -->
+        <button id="nextBtnn" class="absolute right-0 top-1/2 mt-6 py-2 px-4 bg-white rounded-full shadow-md transform -translate-y-1/2 cursor-pointer z-10 hover:bg-gray-100 transition-colors">
+            <i class="fas fa-chevron-right text-2xl"></i>
+        </button>
+    </div>
+ </section>
+
+<!-- eighteenth section -->
+<section class="max-w-[1400px] mx-auto px-2 py-8 overflow-hidden">
+    <div class="text-center">
+        <h3 class="text-4xl font-soehne2 max-md:text-3xl max-sm:text-2xl">Video Clips</h3>
+    </div>
+    <div class="swiper-cont mt-6">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-index="0">
+                <div class="video-wrapper">
+                    <img src="https://img.youtube.com/vi/hw3-oTqT42w/hqdefault.jpg" alt="Video thumbnail" class="thumbnail cursor-pointer h-[20rem] rounded-xl">
+                </div>
+            </div>
+            <div class="swiper-slide" data-index="1">
+                <div class="video-wrapper">
+                    <img src="https://img.youtube.com/vi/VwHJdatzODA/hqdefault.jpg" alt="Video thumbnail" class="thumbnail cursor-pointer h-[20rem] rounded-xl">
+                </div>
+            </div>
+            <div class="swiper-slide" data-index="2">
+                <div class="video-wrapper">
+                    <img src="https://img.youtube.com/vi/3ciUNVaJHSc/hqdefault.jpg" alt="Video thumbnail" class="thumbnail cursor-pointer h-[20rem] rounded-xl">
+                </div>
+            </div>
+            <div class="swiper-slide" data-index="3">
+                <div class="video-wrapper">
+                    <img src="https://img.youtube.com/vi/kMMWujcG8rA/hqdefault.jpg" alt="Video thumbnail" class="thumbnail cursor-pointer h-[20rem] rounded-xl">
+                </div>
+            </div>
+            <div class="swiper-slide" data-index="4">
+                <div class="video-wrapper">
+                    <img src="https://img.youtube.com/vi/k0ZTyDDKAE8/hqdefault.jpg" alt="Video thumbnail" class="thumbnail cursor-pointer h-[20rem] rounded-xl  ">
+                </div>
+            </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+</section>
+
+<!-- Ninteenth Section -->
+<section class="max-w-[1400px] mx-auto px-2 py-10 max-lg:py-8 max-md:py-6 max-sm:py-4">
+    <div class="text-center mb-3">
+        <h3 class="text-2xl md:text-3xl lg:text-4xl font-soehne2">Corporate Mentors</h3>
+    </div>
+
+    <!-- Mobile Swiper Slider -->
+    <div class="py-8 lg:hidden">
+        <div class="mentor-slider-container swiper">
+            <div class="mentor-wrapper swiper-wrapper">
+                <!-- Mentor Cards Will Be Injected Here -->
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+    </div>
+
+    <!-- Desktop Grid Layout -->
+    <div class="py-3 hidden lg:grid grid-cols-6 gap-2.5 px-2" id="mentor-grid">
+        <!-- Mentor Cards Will Be Injected Here -->
+    </div>
+</section>
+
+<!-- last section -->
+<section class="relative bg-[url('https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/building-gims.webp')] bg-cover bg-no-repeat bg-center min-h-screen flex flex-col justify-end">
+    <div class="absolute inset-0 bg-blue-800 opacity-80 z-0"></div>
+    <div class="max-w-[1500px] mx-auto px-4 relative z-10 py-8">
+        <div class="flex flex-col lg:flex-row gap-6">
+            <div class="w-full lg:w-7/12 py-6 px-2 flex flex-col justify-center">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-soehne2 font-semibold text-white mb-6 text-center">
+                    Awards & accolade
+                </h1>
+                <div class="grid grid-cols-3 max-xl:grid-cols-2 max-lg:grid-cols-2 max-md:grid-cols-2 max-sm:grid-cols-1 gap-y-8 gap-x-3" id="awards-grid">
+                    <!-- Awards will be populated here by JavaScript -->
+                </div>
+            </div>
+
+            <div class="w-full lg:w-5/12 px-4 py-6">
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-soehne2 text-white mb-6 flex items-center justify-center transition-transform duration-300 transform hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 md:w-10 md:h-10 mr-2 text-yellow-400 animate-pulse">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    Latest @GIMS
+                </h1>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <div class='bg-gray-200 p-1 rounded-lg'>
+                        <div class="bg-white text-black p-3 h-full rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105 transform hover:bg-indigo-100">
+                            <h3 class="text-lg md:text-xl font-novaBold mb-3 text-indigo-600 flex items-center font-semibold">
+                                <img
+                                    src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/placement-logo10.webp"
+                                    alt="CourseEra Logo"
+                                    class="w-28 h-10 mr-2"
+                                    loading="eager"
+                                />
+                                Certifications
+                            </h3>
+                            <p class="text-xs md:text-sm text-gray-700">Students have received various certifications through online platforms like Courseera to enhance their skills.</p>
+                        </div>
+                    </div>
+                    <div class='bg-gray-200 p-1 rounded-lg'>
+                        <div class="bg-white text-black p-3 h-full rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105 transform hover:bg-indigo-100">
+                            <h3 class="text-lg md:text-xl font-novaBold mb-3 text-indigo-600 font-semibold">MoU Signing with International Universities</h3>
+                            <p class="text-xs md:text-sm text-gray-700">We have signed MoUs with several international universities for student exchange and research opportunities.</p>
+                        </div>
+                    </div>
+                    <div class='bg-gray-200 p-1 rounded-lg'>
+                        <div class="bg-white text-black p-3 h-full rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105 transform hover:bg-indigo-100">
+                            <h3 class="text-lg md:text-xl font-novaBold mb-3 text-indigo-600 font-semibold">IIP to Malaysia</h3>
+                            <p class="text-xs md:text-sm text-gray-700">An immersive Industry oriented curriculum (IIP) in Malaysia to broaden global industry perspectives for students.</p>
+                        </div>
+                    </div>
+                    <div class='bg-gray-200 p-1 rounded-lg'>
+                        <div class="bg-white text-black p-3 h-full rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105 transform hover:bg-indigo-100">
+                            <h3 class="text-lg md:text-xl font-novaBold mb-3 text-indigo-600 font-semibold">Global Sustainable Aviation Conclave</h3>
+                            <p class="text-xs md:text-sm text-gray-700">Our students participated in the Global Sustainable Aviation Conclave at the Indian Aviation Academy in New Delhi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="mt-auto bg-[#000b2c] text-white text-center p-16">
+    <p class="text-lg  font-soehne2">&copy; 2025 All Rights Reserved. Designed & Developed By Brandshow</p>
+</footer>
+
+
+    <!-- script for 1st section -->
+    <script>
+        function openPopup() {
+            document.getElementById('popup-form').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closePopup() {
+            document.getElementById('popup-form').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        gsap.from(".heading", { x: -1000, duration: 0.7, ease: "power2.inOut" });
+        gsap.from(".bottom-section", { y: 120, duration: 0.7, ease: "power2.inOut" });
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-container").innerHTML = data;
+                });
+        });
+    </script>
+
+    <!-- script for 4th section -->
+    <script>
+        document.getElementById("openModal").addEventListener("click", function() {
+            document.getElementById("modal").classList.remove("hidden");
+            document.getElementById("videoFrame").src = "https://www.youtube.com/embed/mPnsuSYSkPc?autoplay=1";
+        });
+
+        document.getElementById("closeModal").addEventListener("click", function() {
+            document.getElementById("modal").classList.add("hidden");
+            document.getElementById("videoFrame").src = "";
+        });
+    </script>
+
+    <!-- script for 5th section -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const companyLogos = [
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo10.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo22.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo23.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo24.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo25.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo26.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo27.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo28.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo29.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo30.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo31.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo32.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo33.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo34.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo35.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo36.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo37.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo38.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo39.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo40.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo41.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo42.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo43.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo44.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo45.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo46.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo47.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo48.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo49.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo50.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo51.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo52.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo53.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo54.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo55.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo56.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo57.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo58.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo59.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo60.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo61.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo62.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo63.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo64.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo65.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo66.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo67.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo68.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo69.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo70.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo71.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo72.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo73.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo74.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo75.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo76.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo77.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo78.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo79.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/logo80.webp",
+            ];
+            
+               
+
+            function populateMarquee(containerId, logos) {
+                const container = document.getElementById(containerId);
+                const duplicateContainer = document.createElement("div");
+                duplicateContainer.classList.add("flex", "space-x-6");
+
+                logos.forEach((logo) => {
+                    let div = document.createElement("div");
+                    div.classList.add("flex", "justify-center", "items-center", "border", "rounded-md",  "h-20", "w-40", "max-sm:h-12", "px-3", "py-2", "max-md:px-2", "max-md:py-1.5", "max-sm:px-1.5", "max-sm:py-1");
+                    div.innerHTML = `<img src="${logo}" class="h-full w-full object-contain" loading="lazy"/>`;
+                    container.appendChild(div.cloneNode(true));
+                    duplicateContainer.appendChild(div.cloneNode(true));
+                });
+
+                container.appendChild(duplicateContainer);
+            }
+
+            populateMarquee("logoRow1", companyLogos);
+            populateMarquee("logoRow2", companyLogos);
+            populateMarquee("logoRow3", companyLogos);
+            // populateMarquee("affiliationRow", affiliationLogos);
+        });
+    </script>
+
+    <!-- script for 6th section -->
+    <script>
+        const studentReviews = [
+            { id: 1, studentName: "Golu Singh", company: "InfoEdge India", heading: "Countless Opportunities at One Place", description: "A big thank you to my support system GIMS for their unwavering belief in me which resulted into getting me a job in INFOEDGE. I am extremely grateful to the college for playing a significant role in helping me secure my dream job.​", image: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/testimonial-1.webp" },
+            { id: 2, studentName: "Shweta Singh", company: "Deloitte", heading: "Countless Opportunities at One Place", description: "Sky is the limit' is what is taught in GIMS. Delighted to announce my placement at Deloitte. Thanks for the guidance and opportunities my college provided.​", image: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/testimonial-2.webp" },
+            { id: 3, studentName: "Navada Tyagi", company: "Decathlon", heading: "Countless Opportunities at One Place", description: "I am thrilled to have secured a position at DECATHALON. And I credit much of my success to my college GIMS to provide me such an amazing Opportunity.​", image: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/testimonial-3.webp" },
+            { id: 4, studentName: "Mansi Mishra", company: "Sonalika International", heading: "Countless Opportunities at One Place", description: "A huge thank you to GIMS for their unwavering support. The guidance and career services provided by the college helped me secure my dream job at Accenture. I am excited to start this new journey.", image: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/testimonial-4.webp" }
+        ];
+        
+        let currentSlide = 0;
+        const sliderContent = document.getElementById("testimonial-content");
+        
+        function updateSlider() {
+            const review = studentReviews[currentSlide];
+            sliderContent.innerHTML = `
+                <div class='relative w-full h-full flex flex-col sm:flex-row bg-gray-200  rounded-2xl'>
+                    <div class='sm:w-2/5'><img src="${review.image}" class='w-full h-full object-cover '></div>
+                    <div class='w-full sm:w-3/5 flex flex-col justify-center p-4'>
+                        <span class='text-lg sm:text-2xl italic font-light'>${review.heading}</span>
+                        <p class='py-2 text-sm sm:text-base italic'>${review.description}</p>
+                        <h4 class='text-lg sm:text-xl text-red-500 font-soehne2'>${review.studentName}</h4>
+                        <span class='text-xs sm:text-sm font-light font-soehne2 text-gray-500'>${review.company}</span>
+                    </div>
+                </div>`;
+        }
+        
+        document.getElementById("next-slide").addEventListener("click", () => {
+            currentSlide = (currentSlide + 1) % studentReviews.length;
+            updateSlider();
+        });
+        
+        document.getElementById("prev-slide").addEventListener("click", () => {
+            currentSlide = (currentSlide - 1 + studentReviews.length) % studentReviews.length;
+            updateSlider();
+        });
+        
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % studentReviews.length;
+            updateSlider();
+        }, 3000);
+        
+        document.getElementById("video-thumbnail").addEventListener("click", () => {
+            document.getElementById("video-modal").classList.remove("hidden");
+            document.getElementById("video-frame").src = "https://www.youtube.com/embed/FlHxgIwPRXs";
+        });
+        
+        document.getElementById("close-video").addEventListener("click", () => {
+            document.getElementById("video-modal").classList.add("hidden");
+            document.getElementById("video-frame").src = "";
+        });
+        
+        updateSlider();
+    </script>
+
+    <!-- script for seventh section -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 10,
+            loop: true,
+            autoplay: { delay: 0, disableOnInteraction: false },
+            speed: 4000,
+            breakpoints: {
+                320: { slidesPerVieww: 2 },
+                480: { slidesPerView: 3 },
+                768: { slidesPerView: 4 },
+                1024: { slidesPerView: 5 },
+                1280: { slidesPerView: 9 }
+            }
+        });
+    </script>
+
+    <!-- script for 8th section -->
+    <script>
+        function openModal(element) {
+    let imgSrc = element.querySelector("img").src;
+    console.log("Image Source:", imgSrc); // Debugging log
+    document.getElementById("modal-img").src = imgSrc;
+    document.getElementById("modal").classList.remove("hidden");
+}
+        function closeModal() {
+            document.getElementById("modal").classList.add("hidden");
+        }
+    </script>
+
+<!-- script for 9th section -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const carousel = document.getElementById("carousel");
+        let index = 0;
+        
+        function slide() {
+            const slides = document.querySelectorAll(".swiperr-slide");
+            index = (index + 1) % slides.length;
+            carousel.scrollTo({ left: index * carousel.clientWidth, behavior: "smooth" });
+        }
+        setInterval(slide, 2000);
+    });
+</script>
+
+<!-- script for 10th section -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const placements = [
+            [
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/abhay-kumar.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/ankur-kumar-mishra.webp",
+            ],
+            [
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/dilpreet-singh.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/hanshika-bhushan.webp",
+            ],
+            [
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/raksha-shreya.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/ritika-saxena.webp",
+            ],
+            [
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/sunaina-thakur.webp",
+                "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/vivek-yadav.webp",
+            ],
+        ];
+
+        placements.forEach((images, index) => {
+            const swiperWrapper = document.querySelector(`.mySwiper${index + 1} .swiper-wrapper`);
+
+            images.forEach((src) => {
+                const slide = document.createElement("div");
+                slide.classList.add("swiper-slide");
+                slide.innerHTML = `<img src="${src}" alt="placement" class="w-full h-auto" loading="eager">`;
+                swiperWrapper.appendChild(slide);
+            });
+
+            new Swiper(`.mySwiper${index + 1}`, {
+                slidesPerView: 1,
+                loop: true,
+                autoplay: {
+                    delay: 3000 + index * 500, // Different delays for each slider
+                    disableOnInteraction: false,
+                }
+            });
+        });
+    });
+</script>
+
+<!-- script for 11th section -->
+<script>
+    const celebSlides = [
+        { imageUrl: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/ashneer.webp", name: "Ashneer Grover" },
+        { imageUrl: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/sanjay.webp", name: "Sanjay Mishra" },
+        { imageUrl: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/panther.webp", name: "Panther" },
+        { imageUrl: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/jaya.webp", name: "Ms. Jaya Kishori" },
+        { imageUrl: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/manoj-muntashir.webp", name: "Manoj Muntashir" },
+        { imageUrl: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/guru-randhawa.webp", name: "Guru Randhawa" }
+    ];
+
+    const desktopContainer = document.getElementById('desktopCelebHighlights');
+    const mobileWrapper = document.getElementById('mobileSwiperWrapper');
+    let activeIndex = 0;
+
+    function renderDesktopSlides() {
+        celebSlides.forEach((slide, index) => {
+            const slideDiv = document.createElement("div");
+            slideDiv.className = `relative group ${index === activeIndex ? "min-w-[69%]" : "min-w-[6%]"} celeb-slide bg-white rounded-3xl shadow-md overflow-hidden cursor-pointer transition-all duration-300 ease-in-out`;
+            slideDiv.innerHTML = `
+                <div class="absolute bottom-0 left-0 w-full text-white m-6 transition-opacity duration-300 ease-in-out ${index === activeIndex ? "opacity-100" : "opacity-0"}">
+                    <h2 class="text-3xl text-white relative z-10 max-md:text-2xl max-sm:text-xl">${slide.name}</h2>
+                </div>
+                <img src="${slide.imageUrl}" alt="${slide.name}" class="w-full h-[500px] object-cover rounded-3xl border border-transparent group-hover:border-gray-400 transition-all duration-500" />
+                <div class="absolute inset-0 rounded-3xl border border-gray-400 opacity-0 group-hover:opacity-100"></div>
+                <div class='absolute inset-0 bg-gradient-to-t from-black to-transparent bg-blend-multiply bg-opacity-80'></div>
+            `;
+            slideDiv.addEventListener("click", () => updateActiveSlide(index));
+            desktopContainer.appendChild(slideDiv);
+        });
+    }
+
+    function updateActiveSlide(index) {
+        activeIndex = index;
+        document.querySelectorAll('.celeb-slide').forEach((el, i) => {
+            el.classList.toggle('min-w-[69%]', i === index);
+            el.classList.toggle('min-w-[6%]', i !== index);
+            el.querySelector('div').classList.toggle('opacity-100', i === index);
+            el.querySelector('div').classList.toggle('opacity-0', i !== index);
+        });
+    }
+
+    function renderMobileSlides() {
+        celebSlides.forEach((slide) => {
+            const slideDiv = document.createElement("div");
+            slideDiv.className = "w-full flex-shrink-0 relative group bg-white rounded-3xl shadow-md overflow-hidden cursor-pointer transition-all duration-300 ease-in-out";
+            slideDiv.innerHTML = `
+                <div class="absolute bottom-0 left-0 w-full text-white m-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                    <h2 class="text-3xl text-white relative z-10 max-md:text-2xl max-sm:text-xl">${slide.name}</h2>
+                </div>
+                <img src="${slide.imageUrl}" alt="${slide.name}" class="w-full h-[500px] object-cover rounded-3xl border border-transparent group-hover:border-gray-400 transition-all duration-500" />
+                <div class="absolute inset-0 rounded-3xl border border-gray-400 opacity-0 group-hover:opacity-100"></div>
+                <div class='absolute inset-0 bg-gradient-to-t from-black to-transparent bg-blend-multiply bg-opacity-80'></div>
+            `;
+            mobileWrapper.appendChild(slideDiv);
+        });
+    }
+
+    function initMobileSwiper() {
+        let currentIndex = 0;
+        function updateMobileSlide() {
+            mobileWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % celebSlides.length;
+            updateMobileSlide();
+        }, 3000);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        renderDesktopSlides();
+        renderMobileSlides();
+        initMobileSwiper();
+    });
+</script>
+
+<!-- script for 12th section -->
+<script>
+    const features = [
+    {
+    imgSrc: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/priti-goel.webp",
+    name: "Ms. Priti Goel",
+    designation: "Founder, CEO and MD",
+    description: "Priti Goel, CEO of Prisha Wealth, brings 23+ years of global banking and entrepreneurship experience as a Corporate Mentor, guiding GNIOT students with expertise, support, and insights for success."
+},
+{
+    imgSrc: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/nitin-kalra.webp",
+    name: "Mr. Nitin Kalra",
+    designation: "AGM-HR, North Zone",
+    description: "Nitin Kalra, an HR leader with 18+ years of expertise, inspires GIMS students to embrace lifelong learning, build skills, and strive for excellence, shaping their path to future success."
+},
+{
+    imgSrc: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/shivani-sharma-singh.webp",
+    name: "Ms. Shivani Sharma Singh",
+    designation: "Head Government Project",
+    description: "A GIMS mentor emphasizes communication, analytics, creativity, customer focus, resilience, tech skills, negotiation, and time management as key Sales & Marketing skills, urging students to pursue excellence."
+},
+{
+    imgSrc: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/rishika.webp",
+    name: "Mrs. Rishika Verma Vohra",
+    designation: "Career Campus & Lateral Recruitment",
+    description: "A GIMS mentor with 12+ years in Talent Acquisition highlights student potential, offering expertise in recruiting, HR policies, DEI, and employee engagement to guide them toward successful careers."
+},
+{
+    imgSrc: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/sandeep-kumar-rastogi.webp",
+    name: "Mr. Sandeep Kumar Rastogi",
+    designation: "Senior Vice President- Growth Financing",
+    description: "A GIMS mentor advises PGDM students to embrace learning, set clear goals, build networks, gain practical experience, and develop soft skills to excel as future business leaders."
+},
+{
+    imgSrc: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/harsh-raghuvanshi.webp",
+    name: "Mr. Harsh Raghuvanshi",
+    designation: "Assistant Manager, Aditya Birla Group",
+    description: "A corporate HR mentor advises PGDM students to excel in analytics, leadership, communication, adaptability, ethics, technical skills, time management, networking, creativity, and continuous learning for successful corporate careers."
+},
+{
+    imgSrc: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/harsh-raj-jain.webp",
+    name: "Mr. Harsh Raj Jain",
+    designation: "Talent Acquisition Head",
+    description: "A corporate HR mentor advises students to focus on professionalism, work ethic, team collaboration, technological proficiency, integrity, and self-motivation to successfully transition into the corporate world."
+},
+    ];
+
+    let currentSlides = 0;
+    let itemsPerPage = 4;
+
+    function updateItemsPerPage() {
+        const width = window.innerWidth;
+        if (width < 640) {
+            itemsPerPage = 1;
+        } else if (width >= 640 && width < 768) {
+            itemsPerPage = 2;
+        } else if (width >= 768 && width < 1024) {
+            itemsPerPage = 3;
+        } else {
+            itemsPerPage = 4;
+        }
+        updateSlider();
+    }
+
+    function updateSlider() {
+        const container = document.getElementById("reviews-container");
+        container.innerHTML = "";
+        const startIndex = currentSlides * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const currentFeatures = features.slice(startIndex, endIndex);
+        
+        currentFeatures.forEach(feature => {
+            const card = document.createElement("div");
+            card.className = "bg-gray-900/50 border-gray-800 p-6 rounded-lg max-lg:p-5 max-sm:text-center max-md:p-4 max-sm:p-3";
+            card.innerHTML = `
+                <div class="rounded-full flex max-sm:justify-center w-full mb-4">
+                    <img src="${feature.imgSrc}" alt="${feature.name}" class="h-16 w-16 rounded-full object-cover" loading="eager"/>
+                </div>
+                <div class="mb-3">
+                    <h4 class="text-lg font-semibold max-sm:text-center max-sm:text-sm text-white">${feature.name}</h4>
+                    <p class="text-sm text-gray-400 max-sm:text-xs">${feature.designation}</p>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed max-sm:text-xs">${feature.description}</p>
+            `;
+            container.appendChild(card);
+        });
+
+        document.getElementById("progressBar").style.width = `${((currentSlides + 1) / Math.ceil(features.length / itemsPerPage)) * 100}%`;
+    }
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+        if (currentSlides > 0) {
+            currentSlides--;
+            updateSlider();
+        }
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+        if (currentSlides < Math.ceil(features.length / itemsPerPage) - 1) {
+            currentSlides++;
+            updateSlider();
+        }
+    });
+
+    window.addEventListener("resize", updateItemsPerPage);
+    updateItemsPerPage();
+</script>
+
+<!-- script for 13th section -->
+<script>
+    const contentData = [
+        {
+            title: "Self-Directed Learning (SDL):",
+            text: "An innovative approach that empowers students to harness their inherent potential through MOOCs Course, Research Paper Publication, Conference Paper Presentation, Live Project for minimum 15 days, External Academic participation, SSO (Self Society Organization).",
+            backgroundImage: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gims-students.webp",
+        },
+        {
+            title: "Corporate Mentorship:",
+            text: "The students are mentored by the corporate personnel from the II trimester, where the students are guided on the various aspects of industry demands from the professionals.",
+            backgroundImage: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gims-students2.webp",
+        },
+        {
+            title: "International Immersion Program(II):",
+            text: "Enriching 1-2 weeks overseas experience, complete with certifications from partner universities. Visited so far Mahsa University, Malaysia, De Montfort University, Dubai campus, Middlesex University, Dubai Campus, Curtin University, Singapore, and Politeknik Negeri, Bali.",
+            backgroundImage: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gims-students3.webp",
+        },
+        {
+            title: "Incubation Centre:",
+            text: "Working closely with the Institute Innovation Councils (IICs), drives innovation and entrepreneurship through incubation support to help students refine their ideas and develop prototypes. InnovateUp, The GIMS incubation centre supports start-up creation by offering mentorship, funding opportunities, and networking connections for aspiring entrepreneurs.",
+            backgroundImage: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gims-students4.webp",
+        },
+        {
+            title: "Non-credit inputs:",
+            text: "To support student growth and skill-building, the non-credit courses, designed in collaboration with our faculty and industry experts, cover critical areas including Microsoft Excel, Learning and Development, Reasoning, Soft Skills, Communication, and Aptitude Training are imparted. ",
+            backgroundImage: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gims-students5.webp",
+        },
+        {
+            title: "The Corporate Talk Series:",
+            text: "Corporate interaction is a regular affair at GIMS, through The Chanakya Talk Series (CTS), The Prabodhan Talk Series (PTS), The Samrik Talk Series (STS)and The HR Talk Series (HTS) inviting leaders from the corporate world, veterans from the Defence forces and administrative services and the professional at operational level in the corporate world.",
+            backgroundImage: "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/gims-students6.webp",
+        },
+    ];
+
+    const container = document.getElementById("content-container");
+
+    contentData.forEach((item, index) => {
+        const card = document.createElement("div");
+        card.className = "text-black rounded-md shadow-md flex flex-col p-4 sm:p-6 md:p-8 h-[380px] relative transition-all duration-500";
+        card.style.background = index === 1
+            ? `linear-gradient(to bottom, rgba(173, 216, 230, 0.7), rgba(0, 0, 128, 0.7)), url(${item.backgroundImage})`
+            : "linear-gradient(to bottom, rgb(217, 228, 239), rgb(245, 219, 236))";
+        card.style.backgroundSize = "cover";
+        card.style.backgroundPosition = "center";
+        card.style.backgroundRepeat = "no-repeat";
+        card.style.color = index === 1 ? "white" : "black";
+
+        card.innerHTML = `
+            <div class="text-center">
+                <h3 class="font-bold text-base sm:text-lg md:text-2xl mb-2">${item.title}</h3>
+                <p class="text-xs sm:text-sm md:text-base font-semibold leading-relaxed">${item.text}</p>
+            </div>
+        `;
+
+        card.addEventListener("mouseenter", function() {
+            card.style.background = `linear-gradient(to bottom, rgba(173, 216, 230, 0.7), rgba(0, 0, 128, 0.7)), url(${item.backgroundImage})`;
+            card.style.backgroundSize = "cover";
+            card.style.backgroundPosition = "center";
+            card.style.color = "white";
+        });
+
+        card.addEventListener("mouseleave", function() {
+            if (index !== 1) {
+                card.style.background = "linear-gradient(to bottom, rgb(217, 228, 239), rgb(245, 219, 236))";
+                card.style.color = "black";
+                card.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+            }
+        });
+
+        container.appendChild(card);
+    });
+</script>
+
+<!-- script for 15th section -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const logos = [
+            "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/affiliations-logo1.webp",
+            "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/affiliations-logo2.webp",
+            "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/affiliations-logo3.webp",
+            "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/affiliations-logo4.webp",
+            "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/affiliations-logo5.webp",
+            "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/affiliations-logo6.webp",
+            "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/affiliations-logo7.webp",
+            "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/affiliations-logo8.webp",
+            "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/affiliations-logo9.webp",
+            "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/affiliations-logo10.webp",
+            "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/affiliations-logo11.webp",
+            "https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/affiliations-logo12.webp",
+        ];
+        
+        const marqueeTrack = document.getElementById("marquee");
+        
+        function createLogoElements() {
+            let logosDuplicated = [...logos, ...logos]; // Duplicate for seamless effect
+            logosDuplicated.forEach((logo, index) => {
+                let div = document.createElement("div");
+                div.className = "flex-shrink-0 w-28 md:w-32 h-28 md:h-32 relative group";
+                div.innerHTML = `
+                    <img src="${logo}" alt="Logo ${index + 1}" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110" loading="eager">
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-br from-blue-100 via-indigo-200 to-purple-300 opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-lg"></div>
+                `;
+                marqueeTrack.appendChild(div);
+            });
+        }
+        
+        createLogoElements();
+    });
+</script>
+
+<!-- script for 17th section -->
+<script>
+    const videoData = [
+        "https://www.youtube.com/watch?v=CwPHw8gCjYY",
+        "https://youtu.be/6X_o0R1em6o?si=gxuadWRTfc3GIQVS",
+        "https://youtu.be/EE-mB4IPy9g?si=bW0NHY74xWYjMt1A",
+        "https://youtu.be/hHRM_12nQxI?si=IRn17C7sG3yPOXvP",
+        "https://youtu.be/OLRHojz-8Yw?si=lZoKokNvLVTG7jvh",
+        "https://youtu.be/czbZKMK91S0?si=nl31LzADdd1Iwm4n",
+        "https://youtu.be/CVhdTYx3qfg?si=sUup0Tv0HnQyXtjM"
+    ];
+    
+    function extractVideoId(url) {
+        const regex = /(?:https?:\/\/(?:www\.)?youtube\.com\/.*[?&]v=|https?:\/\/(?:www\.)?youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+        const match = url.match(regex);
+        return match ? match[1] : null;
+    }
+    
+    const sliderContainer = document.getElementById("sliderContainer");
+    
+    videoData.forEach(url => {
+        const videoId = extractVideoId(url);
+        if (videoId) {
+            const videoItem = document.createElement("div");
+            videoItem.className = "custom-slide bg-white shadow-lg rounded-md overflow-hidden transition duration-300 hover:scale-105 cursor-pointer";
+            videoItem.innerHTML = `
+                <div class="p-2">
+                    <img src="https://img.youtube.com/vi/${videoId}/hqdefault.jpg" class="w-full h-auto rounded-md" data-video="${videoId}">
+                </div>
+            `;
+            sliderContainer.appendChild(videoItem);
+        }
+    });
+    
+    let currentIndexx = 0;
+    const slidesPerVieww = 3;
+    const totalSlides = videoData.length;
+    
+    function updateCarousel() {
+        const translateX = -currentIndexx * (100 / slidesPerVieww);
+        sliderContainer.style.transform = `translateX(${translateX}%)`;
+        
+        // Update button states
+        document.getElementById("prevBtnn").disabled = currentIndexx <= 0;
+        document.getElementById("prevBtnn").classList.toggle("opacity-50", currentIndexx <= 0);
+        
+        document.getElementById("nextBtnn").disabled = currentIndexx >= totalSlides - slidesPerVieww;
+        document.getElementById("nextBtnn").classList.toggle("opacity-50", currentIndexx >= totalSlides - slidesPerVieww);
+    }
+    
+    updateCarousel();
+    
+    document.getElementById("prevBtnn").addEventListener("click", () => {
+        if (currentIndexx > 0) {
+            currentIndexx--;
+            updateCarousel();
+        }
+    });
+    
+    document.getElementById("nextBtnn").addEventListener("click", () => {
+        if (currentIndexx < totalSlides - slidesPerVieww) {
+            currentIndexx++;
+            updateCarousel();
+        }
+    });
+    
+    document.addEventListener("click", (e) => {
+        if (e.target.tagName === "IMG" && e.target.hasAttribute("data-video")) {
+            const videoId = e.target.getAttribute("data-video");
+            if (videoId) {
+                const container = e.target.closest(".custom-slide").querySelector("div");
+                container.innerHTML = `<iframe class='w-full h-64 md:h-80' src='https://www.youtube.com/embed/${videoId}?autoplay=1' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>`;
+            }
+        }
+    });
+</script>
+
+<!-- script for 18th section -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".swiper-cont", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: { slidesPerView: 1 },
+                800: { slidesPerView: 2 },
+                1024: { slidesPerView: 5 }
+            }
+        });
+
+        document.querySelectorAll(".thumbnail").forEach((thumbnail, index) => {
+            thumbnail.addEventListener("click", function () {
+                const videoId = ["hw3-oTqT42w", "VwHJdatzODA", "3ciUNVaJHSc", "kMMWujcG8rA", "k0ZTyDDKAE8"];
+                const wrapper = this.parentElement;
+                wrapper.innerHTML = `<iframe class='w-full h-64 md:h-80' src='https://www.youtube.com/embed/${videoId[index]}?autoplay=1' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen></iframe>`;
+            });
+        });
+    });
+</script>
+
+<!-- script for 19th section -->
+<script>
+    const mentors = [
+    { img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img1.webp', name: 'Ms. Shaweta Berry', position: 'VP', companyname: 'Mahanadaya Universal Consultancy Pvt. Ltd.' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img2.webp', name: 'Mr. Bhasker Das', position: 'Chief Strategy Officer', companyname: 'MCN Solutions Pvt. Ltd.' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img3.webp', name: 'Ms. Alka Sachdeva', position: 'Vice President', companyname: 'All India Council for Robotics & Automation (ACRA)' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img4.webp', name: 'Ms. Richa Daga', position: 'Technologist/Author & Speaker Software Engineer', companyname: 'CISCO' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img5.webp', name: 'Mr. Gurinder Ratra', position: 'Director | Associate Director | Sr. Manager for Digital Excellence ', companyname: 'Deloitte Asia Pacific ' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img6.webp', name: 'Mr. Ankit Nigam', position: 'Head-Product Management & Innovation (Automotive Assistance - India)', companyname: 'Allianz Partners' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img7.webp', name: 'Mr. Mayur Gupta', position: 'Associate Director', companyname: 'CARS24' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img8.webp', name: 'Dr. Aparajita Prasad', position: 'Ex-Director', companyname: 'PwC' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img13.webp', name: 'Mr. Neeten Rohatgi', position: 'Manager- EMEA, Reinsurance Support', companyname: 'MetLife' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img9.webp', name: 'Mr. Ramit Tyagi', position: 'Director, Talent Acquisition', companyname: 'Ultimate Kronos Group' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img10.webp', name: 'Ms. Punam Dagar', position: 'DGM HR', companyname: 'Varun Beverages Ltd' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img11.webp', name: 'Mr. Vir Bharat', position: 'Head HR Business Partner', companyname: 'Yamaha Motor Solutions India' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img12.webp', name: 'Mr. Raizada Sorabh Bali', position: 'Partner & Principal-People Solutions', companyname: 'Posterity Consulting' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img14.webp', name: 'Ms. Priti Goel', position: 'Founder, CEO & MD', companyname: 'Prisha Wealth Management Pvt. Ltd.' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img15.webp', name: 'Mr. Ashish Kumar', position: 'Mentor of Change-ATL (NITI Aayog), YPC 40 Under 40- Service Delivery Manager', companyname: 'TCS' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img16.webp', name: 'Mr. Anurag Mohan', position: 'Skill Portfolio Manager', companyname: 'Nokia Network Pvt. Ltd' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img17.webp', name: 'Ms. Shivani Sharma Singh', position: 'National Head, Government Projects', companyname: 'LG Electronics' },
+{ img: 'https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/mentor-img18.webp', name: 'Mr. Anurag Chandra', position: 'Chief Information Security Officer', companyname: 'IAF' },
+    ];
+
+    const swiperWrapper = document.querySelector(".mentor-wrapper");
+    const mentorGrid = document.getElementById("mentor-grid");
+
+    mentors.forEach((mentor) => {
+        const mentorSlide = `
+            <div class="swiper-slide">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden p-4 mentor-card h-[350px] w-[270px]">
+                    <img src="${mentor.img}" alt="${mentor.name}" class="w-full h-36 rounded-t-3xl mb-4 object-contain bg-gray-200" loading="eager">
+                    <h3 class="text-base font-semibold mb-2">${mentor.name}</h3>
+                    <p class="text-gray-700 text-sm">${mentor.position}</p>
+                    <p class="text-gray-500 text-sm">${mentor.companyname}</p>
+                </div>
+            </div>
+        `;
+        swiperWrapper.innerHTML += mentorSlide;
+    });
+
+    mentors.forEach((mentor) => {
+        const mentorCard = `
+            <div class="bg-white shadow-md rounded-lg overflow-hidden p-4 mentor-card h-[300px]">
+                <img src="${mentor.img}" alt="${mentor.name}" class="w-full h-36 rounded-t-3xl mb-4 object-contain bg-gray-200" loading="eager">
+                <h3 class="text-base font-semibold mb-2">${mentor.name}</h3>
+                <p class="text-gray-700 text-sm">${mentor.position}</p>
+                <p class="text-gray-500 text-sm">${mentor.companyname}</p>
+            </div>
+        `;
+        mentorGrid.innerHTML += mentorCard;
+    });
+
+    new Swiper(".mentor-slider-container", {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+        },
+    });
+</script>
+
+<!-- script for 20th section -->
+ <script>
+    // Award data
+const bulletData = [
+  {
+      image: "path/to/image1.webp",
+      heading: "D30 Youth Icon",
+      description:
+          "Awarded D30 International Excellence and Youth Icon at De-addiction and Disability Awareness Summit in 30 Countries by Kashiyana Foundation.",
+  },
+  {
+      image: "path/to/image2.webp",
+      heading: "Promising B-School",
+      description:
+          "Awarded Promising B School for Strong Industry Connect by Indian Institutional Ranking Framework (IIRF).",
+  },
+  {
+      image: "path/to/image3.webp",
+      heading: "Top 20 B-School",
+      description:
+          "Ranked among Top 20 B-schools in Outlook ICARE- India's Best School 2025 ranking.",
+  },
+  {
+      image: "path/to/image4.webp",
+      heading: "Best Management College",
+      description:
+          "Awarded Best Management College in North India by Intiexcellent Chamber of Commerce & Industry.",
+  },
+  {
+      image: "path/to/image5.webp",
+      heading: "Corporate Interface Excellence",
+      description:
+          "Excellence in Corporate Interface award by Bharat Expo & Awards 2024.",
+  },
+  {
+      image: "path/to/image6.webp",
+      heading: "Top 23 B-School North Zone",
+      description:
+          "Ranked 23rd among Top B Schools in North Zone by BUSINESS WORLD.",
+  },
+  {
+      image: "path/to/image7.webp",
+      heading: "Top 20 Private B-School NCR",
+      description:
+          "Ranked 20th among Top Private B Schools in Delhi/NCR by THE WEEK.",
+  },
+  {
+      image: "path/to/image8.webp",
+      heading: "Top 19 Private B-School North Zone",
+      description:
+          "Ranked 19th among Top Private B Schools in North Zone by Outlook.",
+  },
+  {
+      image: "path/to/image9.webp",
+      heading: "North Zone Top Private",
+      description: "Top Private Institute in North India by JAGRAN JOSH.",
+  },
+  {
+      image: "path/to/image10.webp",
+      heading: "A+ Category",
+      description: "A+ category & Ranked 36th in the B-School Survey.",
+  },
+  {
+      image: "path/to/image11.webp",
+      heading: "Top Emerging B-School",
+      description: "Ranked in Top Emerging B Schools by Times of India.",
+  },
+  {
+      image: "path/to/image12.webp",
+      heading: "AA+ Top Management College",
+      description:
+          "Ranked AA+ among top management colleges in Delhi/NCR by Career360.",
+  },
+  {
+      image: "path/to/image12.webp",
+      heading: "PGDM Excellence",
+      description:
+          "AICTE Approved, 2 Year Full time PGDM Course",
+  },
+  {
+      image: "path/to/image12.webp",
+      heading: "Global Accreditation",
+      description:
+          "Accredited to HLACT UK",
+  },
+  {
+      image: "path/to/image12.webp",
+      heading: "Educational Legacy",
+      description:
+          "Legacy of 21 years in professional education",
+  },
+  {
+      image: "path/to/image12.webp",
+      heading: "Vast Network",
+      description:
+          "18500+ Group Alumni Base",
+  },
+  {
+      image: "path/to/image12.webp",
+      heading: "Expert Educators",
+      description:
+          "Faculty with diverse experience",
+  },
+  {
+      image: "path/to/image12.webp",
+      heading: "Global Exposure",
+      description:
+          "International Immersion Programme(IIP) for all",
+  },
+  {
+      image: "path/to/image12.webp",
+      heading: "Certifications by Coursera",
+      description:
+          "100+ Certifications by Coursera on contemporary industry relevant topics",
+  },
+  {
+      image: "path/to/image12.webp",
+      heading: "Guided Growth",
+      description:
+          "Corporate mentorship for each student",
+  },
+  {
+      image: "path/to/image12.webp",
+      heading: "Career Focused",
+      description:
+          "Industry oriented curriculum",
+  },
+];
+
+// Function to populate the awards grid
+function populateAwardsGrid() {
+  const awardsGrid = document.getElementById('awards-grid');
+  
+  bulletData.forEach((bullet, index) => {
+      const awardElement = document.createElement('div');
+      awardElement.className = 'relative group';
+      awardElement.innerHTML = `
+          <h2 class="max-w-52 mx-auto text-center text-white font-novaSemi mt-4 group-hover:opacity-0 transition-opacity duration-300 flex items-center justify-center relative">
+              <img
+                  src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/left.webp"
+                  alt="award"
+                  class="w-6 h-16 md:w-8 md:h-20"
+                  loading="eager"
+              />
+              <span class="z-10 text-sm md:text-base font-semibold">${bullet.heading}</span>
+              <img
+                  src="https://csip-image.blr1.digitaloceanspaces.com/csip-image/img/content/right.webp"
+                  alt="award"
+                  class="w-6 h-16 md:w-8 md:h-20"
+                  loading="eager"
+              />
+          </h2>
+          <div
+              class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-600 text-white p-2 md:p-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+          >
+              <p class="text-xs md:text-sm text-center">${bullet.description}</p>
+          </div>
+      `;
+      
+      awardsGrid.appendChild(awardElement);
+  });
+}
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', function() {
+  populateAwardsGrid();
+});
+ </script>
+
+</body>
+</html>
